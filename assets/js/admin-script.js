@@ -79,7 +79,7 @@ new Vue({
       var that = this;
       this.docs = this.docs || [];
 
-      Swal.fire({
+      swal.fire({
         title: weDocs.enter_doc_title,
         input: 'text',
         showCancelButton: true,
@@ -110,7 +110,7 @@ new Vue({
     removeDoc: function (doc, docs) {
       var self = this;
 
-      Swal.fire({
+      swal.fire({
         title: 'Are you sure?',
         text: 'Are you sure to delete the entire documentation? Sections and articles inside this doc will be deleted too!',
         icon: 'warning',
@@ -126,7 +126,7 @@ new Vue({
     },
 
     addSection: function (doc) {
-      Swal.fire({
+      swal.fire({
         title: weDocs.enter_section_title,
         input: 'text',
         showCancelButton: true,
@@ -161,7 +161,7 @@ new Vue({
     removeSection: function (section, sections) {
       var self = this;
 
-      Swal.fire({
+      swal.fire({
         title: weDocs.delConfirm,
         text: weDocs.delConfirmTxt,
         icon: 'warning',
@@ -183,7 +183,7 @@ new Vue({
     addArticle: function (section, event) {
       var parentEvent = event;
 
-      Swal.fire({
+      swal.fire({
         title: weDocs.enter_doc_title,
         input: 'text',
         showCancelButton: true,
@@ -230,7 +230,7 @@ new Vue({
     removeArticle: function (article, articles) {
       var self = this;
 
-      Swal.fire({
+      swal.fire({
         title: weDocs.delConfirm,
         text: weDocs.delConfirmTxt,
         icon: 'warning',
@@ -256,7 +256,7 @@ new Vue({
         },
         success: function () {
           Vue.delete(items, index);
-          Swal.fire({
+          swal.fire({
             title: 'Deleted!',
             text: message,
             icon: 'success',
